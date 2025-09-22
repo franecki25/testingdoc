@@ -1,0 +1,17 @@
+name: test
+on:
+  push:
+   branches: main
+
+      
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build & Push Image
+      run: |
+        docker pull franeckn/testtest:v1
+        docker run franeckn/testtest:v1
